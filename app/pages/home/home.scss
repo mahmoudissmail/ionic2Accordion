@@ -1,0 +1,28 @@
+.home {
+  data-cards {
+    ion-item {
+      background-color: transparent;
+      padding-left: 0;
+      position: relative;
+    }
+    ion-label {
+      div {
+        text-transform: none;
+        font-size: 0.8em;
+        padding: 0.5em 0;
+        white-space: normal;
+      }
+    }
+    ion-icon  {
+      font-size: 1.8rem;
+      padding: 0;
+      text-align: center;
+      position: absolute;
+      right: 10px;
+      top: 3px;
+      &:before {
+        font-weight: bold;
+      }
+    }
+  }
+}

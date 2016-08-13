@@ -1,0 +1,9 @@
+<ion-list>
+  <ion-list-header>
+    Ionic 2 Accordion Example.
+  </ion-list-header>
+  <ion-item padding *ngFor="let d of data" (click)="toggleDetails(d)"><ion-icon primary item-right [name]="d.icon"></ion-icon>
+    {{d.title}}
+    <div *ngIf="d.showDetails" text-wrap>{{d.details}}</div>
+  </ion-item>
+</ion-list>
