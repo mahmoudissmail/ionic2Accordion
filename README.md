@@ -1,1 +1,1 @@
-# ionicAccordion
+# ionic2Accordion
