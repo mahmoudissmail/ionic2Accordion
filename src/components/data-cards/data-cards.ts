@@ -4,7 +4,7 @@ import { Data } from '../data/data';
 @Component({
   selector: 'data-cards',
   inputs: ['data'],
-  templateUrl: 'build/components/data-cards/data-cards.html'
+  templateUrl: 'data-cards.html'
 })
 export class DataCards {
 
@@ -21,4 +21,5 @@ export class DataCards {
         data.icon = 'ios-remove-circle-outline';
     }
   }
+
 }
