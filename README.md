@@ -1,4 +1,4 @@
-# # Ionic 2 Accordion Application
+## Ionic 2 Accordion Application
 
 This is a simple variant implementation of an accordion within ionic 2
 

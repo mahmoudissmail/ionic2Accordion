@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {DataCards} from '../../components/data-cards/data-cards';
-import {Data} from '../../components/data/data';
 
 @Component({
   selector: 'page-home',
@@ -9,20 +7,27 @@ import {Data} from '../../components/data/data';
 })
 export class HomePage {
 
-  public dataList: Data[];
+  data: Array<{title: string, details: string, icon: string, showDetails: boolean}> = [];
 
   constructor(public navCtrl: NavController) {
-    this.dataList = [
-      new Data('title 1', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ','ios-remove-circle-outline', true),
-      new Data('title 2', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ','ios-add-circle-outline', false),
-      new Data('title 3', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ','ios-add-circle-outline', false),
-      new Data('title 4', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ','ios-add-circle-outline', false),
-      new Data('title 5', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ','ios-add-circle-outline', false),
-      new Data('title 6', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ','ios-add-circle-outline', false),
-      new Data('title 7', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ','ios-add-circle-outline', false),
-      new Data('title 8', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ','ios-add-circle-outline', false),
-      new Data('title 9', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ','ios-add-circle-outline', false)
-    ];
+    for(let i = 0; i < 10; i++ ){
+      this.data.push({
+          title: 'Title '+i,
+          details: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          icon: 'ios-add-circle-outline',
+          showDetails: false
+        });
+    }
+  }
+
+  toggleDetails(data) {
+    if (data.showDetails) {
+        data.showDetails = false;
+        data.icon = 'ios-add-circle-outline';
+    } else {
+        data.showDetails = true;
+        data.icon = 'ios-remove-circle-outline';
+    }
   }
 
 }
